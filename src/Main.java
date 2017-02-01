@@ -74,7 +74,7 @@ public class Main {
                 if (!Publishertext.getText().equals("")) {
                     reference = reference + Publishertext.getText();
                 }
-                System.out.println(reference);
+    //            System.out.println(reference);
 
                 Generatedreference.setText(reference);
             }
@@ -113,7 +113,7 @@ public class Main {
                     getISBN(ISBNtext.getText());
 
                 } catch (Exception error) {
-                    System.out.println(error.toString());
+       //             System.out.println(error.toString());
                 }
             }
         });
@@ -138,7 +138,7 @@ public class Main {
             response.append(inputLine);
         in.close();
 
-        System.out.println(response);
+ //       System.out.println(response);
 
         parseJson(response.toString());
     }
@@ -148,14 +148,14 @@ public class Main {
 
         JSONObject obj = new JSONObject(rawjson);
         JSONArray items = obj.getJSONArray("items");
-        System.out.println(items.toString());
+//        System.out.println(items.toString());
         JSONObject item = items.getJSONObject(0);
         JSONObject volInfo = item.getJSONObject("volumeInfo");
-        System.out.println(volInfo.getString("title"));
-        System.out.println(volInfo.getString("publisher"));
-        System.out.println(volInfo.getString("publishedDate"));
+//        System.out.println(volInfo.getString("title"));
+  //      System.out.println(volInfo.getString("publisher"));
+    //    System.out.println(volInfo.getString("publishedDate"));
         JSONArray author = volInfo.getJSONArray("authors");
-        System.out.println(author.get(0));
+//        System.out.println(author.get(0));
 
         //code for name to change into correct harvard referencing format
 
@@ -164,8 +164,8 @@ public class Main {
         StringBuilder harvardName = new StringBuilder();
         List<String> nameParts = new ArrayList<String>();
         int parts = nameItems.length;
-        System.out.println(parts);
-        System.out.println(nameItems[parts - 1]);
+     //   System.out.println(parts);
+     //   System.out.println(nameItems[parts - 1]);
         for (String Nitem : nameItems) {
             nameParts.add(Nitem);
         }
@@ -177,7 +177,7 @@ public class Main {
                 harvardName.append(". " + section.substring(0, 1));
             }
         });
-        System.out.println(harvardName.toString());
+        //     System.out.println(harvardName.toString());
 
         String year = null;
         try {
@@ -187,7 +187,7 @@ public class Main {
             SimpleDateFormat outPut = new SimpleDateFormat("yyyy");
             year = outPut.format(date.getTime());
 //this will output the year only - though you'll need to wrap it in ()
-            System.out.println(year.toString());
+     //       System.out.println(year.toString());
         } catch (Exception e) {
 
         }
