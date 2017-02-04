@@ -7,6 +7,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -45,6 +46,10 @@ public class Main {
     private JEditorPane Generatedreference;
     private JButton Generate;
     private JPanel Harvardreferencer;
+    private JButton Blue;
+    private JButton Yellow;
+    private JButton Green;
+    private JLabel backgroundColour;
 
     /**
      * Action for the generate button, includes if states so that if no information is inputted then
@@ -116,6 +121,119 @@ public class Main {
        //             System.out.println(error.toString());
                 }
             }
+        });
+
+        //Action listeners for changing the background and text colour on the whole form for accessibility issues.
+        
+        Blue.addActionListener(new ActionListener() {
+
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Harvardreferencer.setBackground(Color.BLUE);
+                Authortext.setBackground(Color.BLUE);
+                Pubdatetext.setBackground(Color.BLUE);
+                Publishertext.setBackground(Color.BLUE);
+                Publication.setBackground(Color.BLUE);
+                Editortext.setBackground(Color.BLUE);
+                Booktext.setBackground(Color.BLUE);
+                Editiontext.setBackground(Color.BLUE);
+                ISBNtext.setBackground(Color.BLUE);
+                Generatedreference.setBackground(Color.BLUE);
+                Harvardreferencer.setForeground(Color.WHITE);
+                Authortext.setForeground(Color.WHITE);
+                Pubdatetext.setForeground(Color.WHITE);
+                Publishertext.setForeground(Color.WHITE);
+                Publication.setForeground(Color.WHITE);
+                Editortext.setForeground(Color.WHITE);
+                Booktext.setForeground(Color.WHITE);
+                Editiontext.setForeground(Color.WHITE);
+                ISBNtext.setForeground(Color.WHITE);
+                Generatedreference.setForeground(Color.WHITE);
+                Name.setForeground(Color.WHITE);
+                ISBN.setForeground(Color.WHITE);
+                Pubdate.setForeground(Color.WHITE);
+                Author.setForeground(Color.WHITE);
+                Editor.setForeground(Color.WHITE);
+                Book.setForeground(Color.WHITE);
+                Place.setForeground(Color.WHITE);
+                Publisher.setForeground(Color.WHITE);
+                Edition.setForeground(Color.WHITE);
+                backgroundColour.setForeground(Color.WHITE);
+
+
+
+            }
+        });
+        Yellow.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Harvardreferencer.setBackground(Color.YELLOW);
+                Authortext.setBackground(Color.YELLOW);
+                Pubdatetext.setBackground(Color.YELLOW);
+                Publishertext.setBackground(Color.YELLOW);
+                Publication.setBackground(Color.YELLOW);
+                Editortext.setBackground(Color.YELLOW);
+                Booktext.setBackground(Color.YELLOW);
+                Editiontext.setBackground(Color.YELLOW);
+                ISBNtext.setBackground(Color.YELLOW);
+                Generatedreference.setBackground(Color.YELLOW);
+                Harvardreferencer.setForeground(Color.BLACK);
+                Authortext.setForeground(Color.BLACK);
+                Pubdatetext.setForeground(Color.BLACK);
+                Publishertext.setForeground(Color.BLACK);
+                Publication.setForeground(Color.BLACK);
+                Editortext.setForeground(Color.BLACK);
+                Booktext.setForeground(Color.BLACK);
+                Editiontext.setForeground(Color.BLACK);
+                ISBNtext.setForeground(Color.BLACK);
+                Generatedreference.setForeground(Color.BLACK);
+                Name.setForeground(Color.BLACK);
+                ISBN.setForeground(Color.BLACK);
+                Pubdate.setForeground(Color.BLACK);
+                Author.setForeground(Color.BLACK);
+                Editor.setForeground(Color.BLACK);
+                Book.setForeground(Color.BLACK);
+                Place.setForeground(Color.BLACK);
+                Publisher.setForeground(Color.BLACK);
+                Edition.setForeground(Color.BLACK);
+                backgroundColour.setForeground(Color.BLACK);
+            }
+        });
+        Green.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Harvardreferencer.setBackground(Color.GREEN);
+                Authortext.setBackground(Color.GREEN);
+                Pubdatetext.setBackground(Color.GREEN);
+                Publishertext.setBackground(Color.GREEN);
+                Publication.setBackground(Color.GREEN);
+                Editortext.setBackground(Color.GREEN);
+                Booktext.setBackground(Color.GREEN);
+                Editiontext.setBackground(Color.GREEN);
+                ISBNtext.setBackground(Color.GREEN);
+                Generatedreference.setBackground(Color.GREEN);
+                Harvardreferencer.setForeground(Color.BLACK);
+                Authortext.setForeground(Color.BLACK);
+                Pubdatetext.setForeground(Color.BLACK);
+                Publishertext.setForeground(Color.BLACK);
+                Publication.setForeground(Color.BLACK);
+                Editortext.setForeground(Color.BLACK);
+                Booktext.setForeground(Color.BLACK);
+                Editiontext.setForeground(Color.BLACK);
+                ISBNtext.setForeground(Color.BLACK);
+                Generatedreference.setForeground(Color.BLACK);
+                Name.setForeground(Color.BLACK);
+                ISBN.setForeground(Color.BLACK);
+                Pubdate.setForeground(Color.BLACK);
+                Author.setForeground(Color.BLACK);
+                Editor.setForeground(Color.BLACK);
+                Book.setForeground(Color.BLACK);
+                Place.setForeground(Color.BLACK);
+                Publisher.setForeground(Color.BLACK);
+                Edition.setForeground(Color.BLACK);
+                backgroundColour.setForeground(Color.BLACK);
+                            }
         });
     }
 
@@ -207,6 +325,7 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
 
     }
 }
